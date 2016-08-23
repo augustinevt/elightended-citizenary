@@ -1,0 +1,12 @@
+<h3>{{legislator.title}}. {{legislator.first_name}} {{legislator.last_name}}, {{legislator.party}} {{legislator.state_name}}</h3>
+{{#if legislator.district}}
+  <h4>District {{legislator.district}}</h4>
+{{/if}}
+<h4>Email: <a href="mailto:{{legislator.oc_email}}">{{legislator.oc_email}}</a></h4>
+<h4><a href="{{legislator.website}}">{{legislator.website}}</a></h4>
+{{#if legislator.facebook_id}}
+  <h4><a href="http://facebook.com/profile.php?id={{legislator.facebook_id}}">Facebook</a></h4>
+{{/if}}
+{{#if legislator.twitter_id}}
+  <h4><a href="http://twitter.com/{{legislator.twitter_id}}">Twitter</a></h4>
+{{/if}}

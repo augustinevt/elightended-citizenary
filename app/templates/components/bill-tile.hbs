@@ -2,7 +2,12 @@
 
 {{#if expanded}}
   <a href="{{bill.last_version.urls.pdf}}">Most recent version</a><br>
-  Sponsor: {{bill.sponsor.title}}. {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}<br>
+  Sponsor: {{#link-to 'legislator' bill.sponsor_id}} {{bill.sponsor.title}}. {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}{{/link-to}}<br>
   Chamber: {{bill.chamber}}<br>
-  
+  committees:
+  <ul>
+  {{#each bill.committees as |committee|}}
+    <li>{{#link-to 'committee' committee.committee.committee_id }}{{committee.committee.name}}{{/link-to}}</li>
+  {{/each}}
+  </ul>
 {{/if}}

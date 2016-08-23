@@ -1,0 +1,11 @@
+  <div class="committee-tile">
+    {{#link-to 'committee' committee.committee_id}}
+      <h3>{{committee.name}}</h3>
+    {{/link-to}}
+    <h4>Chamber: {{committee.chamber}}</h4>
+    {{#if committee.parent_committee_id}}
+      {{#link-to 'committee' committee.parent_committee_id}}
+        Parent Committee
+      {{/link-to}}
+    {{/if}}
+  </div>

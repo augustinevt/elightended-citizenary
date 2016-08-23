@@ -1,0 +1,5 @@
+{{#each model as |committee|}}
+  {{#unless committee.subcommittee}}
+    {{committee-tile committee=committee}}
+  {{/unless}}
+{{/each}}

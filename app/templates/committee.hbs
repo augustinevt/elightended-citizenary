@@ -1,0 +1,16 @@
+{{committee-tile committee=model.committee}}
+{{#if model.subcommittees}}
+  <h2>Subcommittees</h2>
+  {{#each model.subcommittees as |committee|}}
+    {{committee-tile committee=committee }}
+  {{/each}}
+{{else}}
+  <h3>There are no subcommittees</h3>
+{{/if}}
+<h2>Legislators</h2>
+{{#each model.legislators as |legislator|}}
+  {{#if legislator.title}}
+    {{legislator.title}}
+  {{/if}}
+  {{legislator-tile legislator=legislator.legislator}}
+{{/each}}

@@ -1,0 +1,8 @@
+ <h3 class="bill-title" {{action 'toggleBill'}}>{{bill.official_title}}</h3>
+
+{{#if expanded}}
+  <a href="{{bill.last_version.urls.pdf}}">Most recent version</a><br>
+  Sponsor: {{bill.sponsor.title}}. {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}<br>
+  Chamber: {{bill.chamber}}<br>
+  
+{{/if}}

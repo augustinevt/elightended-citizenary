@@ -1,7 +1,6 @@
 # Sunlight-api
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This project utilizes the sunlight foundations api and Ember's http functions
 
 ## Prerequisites
 
